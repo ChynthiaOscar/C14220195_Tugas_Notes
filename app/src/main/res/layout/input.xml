@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Title Input -->
+    <EditText
+        android:id="@+id/inputTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Title"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginStart="16dp"
+        app:layout_constraintMarginEnd="16dp"
+        app:layout_constraintMarginTop="32dp" />
+
+    <!-- Date Input -->
+    <EditText
+        android:id="@+id/inputDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Date (e.g., yyyy-mm-dd)"
+        android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@id/inputTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginStart="16dp"
+        app:layout_constraintMarginEnd="16dp"
+        app:layout_constraintMarginTop="16dp" />
+
+    <!-- Notes Input -->
+    <EditText
+        android:id="@+id/inputNotes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="Enter Notes"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/inputDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/submitButton"
+        app:layout_constraintMarginStart="16dp"
+        app:layout_constraintMarginEnd="16dp"
+        app:layout_constraintMarginTop="16dp"
+        app:layout_constraintMarginBottom="16dp" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/inputNotes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintMarginTop="16dp"
+        app:layout_constraintMarginBottom="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
